@@ -1,0 +1,18 @@
+name: Run reproducer on each commit
+on: push
+jobs:
+  gradle:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-java@v1
+      with:
+        java-version: 11
+    - name: test using Mongock 4
+      uses: gradle/gradle-build-action@v2
+      with:
+        arguments: check -x mongock5:test
+    - name: test using Mongock 5
+      uses: gradle/gradle-build-action@v2
+      with:
+        arguments: mongock5:test
