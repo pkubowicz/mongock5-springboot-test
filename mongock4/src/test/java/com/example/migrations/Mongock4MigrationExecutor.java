@@ -1,5 +1,6 @@
 package com.example.migrations;
 
+import com.example.mongock.MigrationExecutor;
 import com.github.cloudyrock.spring.v5.MongockSpring5.MongockApplicationRunner;
 import com.mongodb.client.MongoDatabase;
 import org.bson.Document;

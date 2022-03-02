@@ -1,4 +1,4 @@
-package com.example.migrations;
+package com.example.mongock;
 
 import com.example.testcontainers.MongoInitializer;
 import com.mongodb.client.MongoDatabase;
@@ -17,7 +17,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
 @ContextConfiguration(initializers = MongoInitializer.class)
-abstract class BaseCountingMigrationTest {
+public abstract class BaseCountingMigrationTest {
 
     @Autowired
     private MigrationExecutor migrationExecutor;
@@ -42,6 +42,7 @@ abstract class BaseCountingMigrationTest {
         );
         mongoDatabase.getCollection("summary").deleteMany(new Document());
 
+        System.out.println("RUNNING MIGRATIONS");
         migrationExecutor.runAllMigrations(mongoDatabase, migrationCollectionName);
 
         var found = mongoDatabase.getCollection("summary").find();

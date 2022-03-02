@@ -1,4 +1,4 @@
-package com.example.migrations;
+package com.example.mongock;
 
 import com.mongodb.client.MongoDatabase;
 
