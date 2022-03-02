@@ -1,0 +1,8 @@
+spring:
+  data:
+    mongodb:
+      database: mongock5-springboot
+
+mongock:
+  change-logs-scan-package: com.example.migrations
+  change-log-collection-name: dbchangelog
