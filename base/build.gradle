@@ -1,0 +1,20 @@
+plugins {
+    id 'java-library'
+    id 'checkstyle'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    api platform("org.springframework.boot:spring-boot-dependencies:2.6.4")
+    api('org.springframework.boot:spring-boot-starter-data-mongodb')
+
+    platform implementation('com.github.cloudyrock.mongock:mongock-bom:4.3.8')
+    compileOnly('com.github.cloudyrock.mongock:mongodb-springdata-v3-driver')
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

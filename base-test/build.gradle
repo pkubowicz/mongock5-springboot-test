@@ -1,0 +1,18 @@
+plugins {
+    id 'java-library'
+    id 'checkstyle'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    api project(':base')
+    api('org.springframework.boot:spring-boot-starter-test')
+    api('org.testcontainers:mongodb:1.16.3')
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
