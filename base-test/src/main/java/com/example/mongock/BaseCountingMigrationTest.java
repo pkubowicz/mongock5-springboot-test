@@ -22,7 +22,7 @@ public abstract class BaseCountingMigrationTest {
     @Autowired
     private MigrationExecutor migrationExecutor;
 
-    @Value("${mongock.change-log-collection-name}")
+    @Value("${mongock.change-log-repository-name}")
     private String migrationCollectionName;
 
     private MongoDatabase mongoDatabase;

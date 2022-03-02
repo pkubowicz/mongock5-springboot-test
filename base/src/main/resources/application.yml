@@ -1,4 +1,3 @@
 mongock:
   change-logs-scan-package: com.example.migrations
-  change-log-collection-name: dbchangelog
-  migration-repository-name: dbchangelog
+  change-log-repository-name: dbchangelog
