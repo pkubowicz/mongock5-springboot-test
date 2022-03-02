@@ -1,4 +1,4 @@
-package com.example.migrations;
+package com.example.mongock4;
 
 import com.example.mongock.MigrationExecutor;
 import com.github.cloudyrock.spring.v5.MongockSpring5.MongockApplicationRunner;
@@ -10,10 +10,10 @@ import org.springframework.stereotype.Component;
 import static com.mongodb.WriteConcern.MAJORITY;
 
 @Component
-public class Mongock4MigrationExecutor implements MigrationExecutor {
+public class MongockMigrationExecutor implements MigrationExecutor {
     private final MongockApplicationRunner migrationRunner;
 
-    public Mongock4MigrationExecutor(MongockApplicationRunner migrationRunner) {
+    public MongockMigrationExecutor(MongockApplicationRunner migrationRunner) {
         this.migrationRunner = migrationRunner;
     }
 

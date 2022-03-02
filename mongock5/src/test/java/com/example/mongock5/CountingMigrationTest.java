@@ -1,4 +1,4 @@
-package com.example.migrations;
+package com.example.mongock5;
 
 import com.example.mongock.BaseCountingMigrationTest;
 import org.springframework.test.context.TestPropertySource;
