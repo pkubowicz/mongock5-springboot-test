@@ -12,6 +12,7 @@ dependencies {
     platform implementation('io.mongock:mongock-bom:5.0.36')
     implementation('io.mongock:mongock-springboot')
     implementation('io.mongock:mongodb-springdata-v3-driver')
+    testImplementation('io.mongock:mongock-standalone')
 
     testImplementation project(':base-test')
 }
